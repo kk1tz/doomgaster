@@ -957,10 +957,8 @@
             remotePlayerMesh.rotation.y = ry;
         }
 
-        document.getElementById('host-btn').addEventListener('click', createGame);
+                document.getElementById('host-btn').addEventListener('click', createGame);
         document.getElementById('join-btn').addEventListener('click', joinGame);
-        document.getElementById('accept-btn').addEventListener('click', acceptConnection);
-        document.getElementById('accept-btn').addEventListener('click', acceptConnection);
 
         setInterval(function() {
             if (dataChannel && dataChannel.readyState === 'open') {
