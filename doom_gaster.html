@@ -143,7 +143,23 @@
         .achievement-item:hover { border-color: #ffd700; }
         .achievement-item.locked img { filter: brightness(0.3); }
         .achievement-item.unlocked { border-color: #00ff00; }
-        .achievement-item.secret-unlocked { border-color: #ffd700; animation: secretGlow 2s infinite; }
+        .achievement-item.secret-unlocked { border-color: #ffd700; animation: secretGlow 2s infini            const config = { 
+                iceServers: [
+                    { urls: 'stun:stun.l.google.com:19302' },
+                    { urls: 'stun:stun1.l.google.com:19302' },
+                    { urls: 'stun:stun2.l.google.com:19302' },
+                    {
+                        urls: 'turn:turn.anyfirewall.com:3478',
+                        username: 'user',
+                        credential: 'pass'
+                    },
+                    {
+                        urls: 'turns:turn.anyfirewall.com:443',
+                        username: 'user',
+                        credential: 'pass'
+                    }
+                ] 
+            };te; }
         @keyframes secretGlow {
             0% { box-shadow: 0 0 5px #ffd700; }
             50% { box-shadow: 0 0 20px #ffd700; }
@@ -656,7 +672,23 @@
             const text = biblioxOptions[Math.floor(Math.random() * biblioxOptions.length)];
             
             biblioxSpeech.innerText = text;
-            biblioxSpeech.style.display = 'block';
+            biblioxSpeech.style.display = 'block';            const config = { 
+                iceServers: [
+                    { urls: 'stun:stun.l.google.com:19302' },
+                    { urls: 'stun:stun1.l.google.com:19302' },
+                    { urls: 'stun:stun2.l.google.com:19302' },
+                    {
+                        urls: 'turn:turn.anyfirewall.com:3478',
+                        username: 'user',
+                        credential: 'pass'
+                    },
+                    {
+                        urls: 'turns:turn.anyfirewall.com:443',
+                        username: 'user',
+                        credential: 'pass'
+                    }
+                ] 
+            };
             clearTimeout(biblioxTimer);
             biblioxTimer = setTimeout(function() { biblioxSpeech.style.display = 'none'; }, 2000);
         }
@@ -746,7 +778,19 @@
             ctx.fillStyle = '#ffffff';
             ctx.beginPath();
             ctx.arc(px, pz, 4, 0, Math.PI * 2);
-            ctx.fill();
+            ctx.fill();                        const config = { 
+                iceServers: [
+                    { urls: 'stun:stun.l.google.com:19302' },
+                    { urls: 'stun:stun1.l.google.com:19302' },
+                    { urls: 'stun:stun2.l.google.com:19302' },
+                    { urls: 'stun:stun3.l.google.com:19302' },
+                    { urls: 'stun:stun4.l.google.com:19302' },
+                    { urls: 'stun:stun.services.mozilla.com' },
+                    { urls: 'turn:global.xirsys.com:3478', username: 'demo', credential: 'demo' }
+                ],
+                iceTransportPolicy: 'all',
+                iceCandidatePoolSize: 10
+            };
 
             // Зелёный Пиппинс — зелёная точка
             if (greenPippinsMesh) {
